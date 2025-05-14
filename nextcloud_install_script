@@ -8,7 +8,8 @@ echo "Für den Start benötigen wir einige Informationen"
 
 read -p "Bitte gib die Domain für deine Nextcloud ein: " DOMAIN
 read -p "Bitte gib E-Mail Adresse ein: " MAIL
-read -p "Bitte gib das Memory Limit für PHP ein: " MEMLIMIT
+read -p "Bitte gib das Memory Limit für PHP ein (nur Zahl, z.B. 8196): " MEMLIMIT
+MEMLIMIT="${MEMLIMIT}M"
 
 echo "Wir benötigen noch Informationen für die Datenbank"
 
@@ -173,3 +174,12 @@ certbot --apache \
 
 #Abschlussmeldung
 echo "✅ Deine Nextcloud ist eingerichtet. Bitte verbinde dich nun mit dem Browser auf $DOMAIN und schliesse die Einrichtung ab."
+
+# Nutzer fragen, ob das Skript gelöscht werden soll
+read -p "Möchtest du das Skript löschen? (j/n): " DELETE
+if [[ "$DELETE" =~ ^[Jj]$ ]]; then
+    echo "Skript wird gelöscht..."
+    rm -- "$0"
+else
+    echo "Skript bleibt erhalten."
+fi
