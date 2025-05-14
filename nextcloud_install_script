@@ -16,7 +16,6 @@ read -p "Bitte gib den Namen für die Datenbank ein: " DATABASE
 read -p "Bitte gib Benutzernamen für die Datenbank ein: " DATABASEUSER
 read -s -p "Bitte gib das Passwort für den Datenbankbenutzer ein: " DBUSERPW
 
-
 # Kurze Zusammenfassung
 echo "Zusammenfassung:"
 echo "Domain: $DOMAIN"
