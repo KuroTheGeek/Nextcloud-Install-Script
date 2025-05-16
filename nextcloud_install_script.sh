@@ -174,12 +174,3 @@ certbot --apache \
 
 #Abschlussmeldung
 echo "✅ Deine Nextcloud ist eingerichtet. Bitte verbinde dich nun mit dem Browser auf $DOMAIN und schliesse die Einrichtung ab."
-
-# Nutzer fragen, ob das Skript gelöscht werden soll
-read -p "Möchtest du das Skript löschen? (j/n): " DELETE
-if [[ "$DELETE" =~ ^[Jj]$ ]]; then
-    echo "Skript wird gelöscht..."
-    rm -- "$0"
-else
-    echo "Skript bleibt erhalten."
-fi
