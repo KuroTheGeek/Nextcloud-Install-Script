@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Begrüßung
-echo "Willkommen beim Nextcloud Installationsscript von IT Alchemist"
+echo "Willkommen beim Nextcloud Installationsscript"
 
 # Abfrage von Informationen
 echo "Für den Start benötigen wir einige Informationen"
